@@ -33,13 +33,13 @@ func main() {
 	if len(*inputFlag) == 0 {
 		for {
 			_, err := fmt.Scanln(&input)
+			fmt.Printf("%s%s%s\n",prefix,input,suffix)
 			if err != nil {
 				break
 			}
 		}
 	}else{
 		input = *inputFlag
+		fmt.Printf("%s%s%s\n",prefix,input,suffix)
 	}
-
-	fmt.Printf("%s%s%s",prefix,input,suffix)
 }
